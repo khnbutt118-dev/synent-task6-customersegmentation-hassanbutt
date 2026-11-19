@@ -1,63 +1,38 @@
-<p align="center"><img src="https://raw.githubusercontent.com/khnbutt118-dev/khnbutt118-dev/main/assets/medical-ai-banner.svg" alt="Hassan Butt — Pharmacy meets Artificial Intelligence" width="100%"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/khnbutt118-dev/khnbutt118-dev/main/assets/medical-ai-banner.svg" width="100%" alt="Hassan Butt — Pharmacy meets Artificial Intelligence"></p>
+<p align="center"><a href="https://github.com/khnbutt118-dev">← PROFILE</a> &nbsp;·&nbsp; <a href="https://hassanbuttportfolio.vercel.app/">PORTFOLIO</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/hassan-butt-ab0036334/">LINKEDIN</a></p>
 
-<p align="center"><a href="https://github.com/khnbutt118-dev">← Back to GitHub profile</a> · <a href="https://hassanbuttportfolio.vercel.app/">Portfolio</a> · <a href="https://www.linkedin.com/in/hassan-butt-ab0036334/">LinkedIn</a></p>
+<p align="center"><img src="https://img.shields.io/badge/SYNENT-TASK%2006-087EAD?style=for-the-badge"><img src="https://img.shields.io/badge/ML-K%20MEANS-155E9A?style=for-the-badge"><img src="https://img.shields.io/badge/FOCUS-CUSTOMER%20SEGMENTS-0B719E?style=for-the-badge"></p>
 
----
+# 🧩 Customer Segmentation · K-Means
+**Discover customer groups from annual income and spending behaviour.**
 
-# Customer Segmentation (Mall Customers, K-Means)
+<table><tr><td align="center"><h2>200</h2><sub>Customers</sub></td><td align="center"><h2>5</h2><sub>Clusters selected</sub></td><td align="center"><h2>0.55</h2><sub>Silhouette score</sub></td><td align="center"><h2>81</h2><sub>Largest segment</sub></td></tr></table>
 
-> Synent Technologies Data Science Internship | Task 6 (Intermediate level) | Author: Hassan Butt
+## 🗺️ Cluster visual gallery
+<p align="center"><img src="outputs/customer_segments.png" alt="Customer segments visualisation" width="90%"></p>
+<p align="center"><img src="outputs/elbow_and_silhouette.png" alt="Elbow method and silhouette score" width="90%"></p>
+<p align="center"><img src="outputs/cluster_age_and_size.png" alt="Cluster age and size comparison" width="90%"></p>
 
-## Problem statement
-Group mall customers by income and spending behaviour so marketing can target each segment.
+## 👥 Segment insights
+<table>
+<tr><td width="50%">🏷️ **Average customers**<br><sub>Largest group · 81 customers</sub></td><td width="50%">💎 **Premium segment**<br><sub>39 customers · high income and high spending · average age 33</sub></td></tr>
+<tr><td>🎯 **High income, low spending**<br><sub>35 customers · potential audience for targeted campaigns</sub></td><td>📐 **Cluster selection**<br><sub>k = 5 selected using elbow and silhouette analysis</sub></td></tr>
+</table>
 
-## Dataset details
-- **Dataset:** Mall Customer Segmentation dataset
-- **Source:** https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python
-- **Size used:** 200 rows x 5 columns
+## ⚙️ Workflow
+Feature preparation → Elbow & silhouette analysis → K-Means clustering → Segment profiling → Visual interpretation
 
-## Approach
-1. Cleaned and standardised the features
-2. Chose k with the elbow method and silhouette score
-3. Fitted K-Means and profiled each cluster (age, income, spending)
-4. Named the segments and visualised clusters with centroids
-
-## Results
-| Metric | Value |
-|---|---|
-| Customers | 200 |
-| Clusters (k) | 5 |
-| Silhouette score | 0.55 |
-| Largest segment | Average customers |
-
-**Key insights**
-
-- The silhouette score is highest at k = 5 (0.55), so 5 segments were used.
-- The largest segment is 'Average customers' with 81 customers.
-- The premium segment (high income, high spending) has 39 customers with an average age of 33, a priority for loyalty offers.
-- The 'high income, low spending' segment (35 customers) is a candidate for targeted campaigns, since these customers have the means to spend more.
-
-**Figures**
-
-![elbow_and_silhouette.png](outputs/elbow_and_silhouette.png)
-![customer_segments.png](outputs/customer_segments.png)
-![cluster_age_and_size.png](outputs/cluster_age_and_size.png)
-
-**Other output files:** `segment_profiles.csv`, `customers_with_segments.csv`
-
-## How to run
+## ▶️ Reproduce
 ```bash
 pip install -r requirements.txt
 python main.py
 ```
 
-## Project structure
-```
-main.py            # full analysis / pipeline
-requirements.txt
-data/              # dataset (see data/README.md)
-outputs/           # figures, tables and reports
-```
+<details><summary><b>Dataset & outputs</b></summary>
 
-## Academic integrity
-All analysis code and write-ups in this repository were written by the author. The dataset belongs to its original creators (see link above).
+- Dataset: [Mall Customer Segmentation](https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python)
+- Data used: 200 rows × 5 columns
+- Outputs: `segment_profiles.csv`, `customers_with_segments.csv`, `outputs/`
+
+</details>
+<p align="center"><sub>Python · Pandas · Scikit-learn · K-Means</sub></p>
